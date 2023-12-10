@@ -230,13 +230,13 @@ struct strbuf **strbuf_split_buf(const char *str, size_t len, int terminator, in
             i++;
         }
         if(flag == 1){
-        ret[j] = (struct strbuf*)malloc(sizeof(struct strbuf));
-        ret[j]->buf = (char*)malloc(tokenlen + 1);
-        ret[j]->len = tokenlen;
-        ret[j]->alloc = tokenlen + 1;
-        memcpy(ret[j]->buf,begin,tokenlen);
-        ret[j]->buf[tokenlen] = '\0';
-        j++;
+            ret[j] = (struct strbuf*)malloc(sizeof(struct strbuf));
+            ret[j]->buf = (char*)malloc(tokenlen + 1);
+            ret[j]->len = tokenlen;
+            ret[j]->alloc = tokenlen + 1;
+            memcpy(ret[j]->buf,begin,tokenlen);
+            ret[j]->buf[tokenlen] = '\0';
+            j++;
         }
         else {
             break;
